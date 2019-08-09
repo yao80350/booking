@@ -1,0 +1,55 @@
+.search {
+    display: flex;
+    flex: 0 0 40%;
+
+    @include respond(extra-small) {
+        order: 1;
+        flex: 0 0 100%;
+        justify-content: center;
+    }
+
+    &__input {
+        background-color: $color-grey-light-2;
+        padding: 7px 1.25rem;
+        border-radius: 100px; 
+        width: 90%;
+        margin-right: -2.2rem;
+        transition: all .2s;
+
+        @include respond(extra-small) {
+            width: 80%;
+            margin-left: -1.25rem;
+        }
+
+        &:focus {
+            width: 100%;
+            background-color: $color-grey-light-3;
+
+            @include respond(extra-small) {
+                width: 90%;
+            }
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: $color-grey-light-4;
+        }
+        
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+
+    &__icon {
+        height: 1.25rem;
+        width: 1.25rem;
+        fill: $color-grey-dark-3;
+    }
+}

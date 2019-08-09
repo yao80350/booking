@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .87rem;
+    height: 4.3rem;
+    background-color: $color-white;
+    border-bottom: 1px solid $color-grey-light-2;
+
+    @include respond(extra-small) {
+        flex-wrap: wrap;
+        align-content: space-around;
+        height: 7rem;
+    }
+}
+
+.logo {
+    height: 2rem;
+    margin-left: 1.25rem;
+
+    @include respond(extra-small) {
+        margin-left: .8rem;
+    }
+}

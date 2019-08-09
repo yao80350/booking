@@ -1,0 +1,55 @@
+.detail {
+    display: flex;
+    padding: $detail-gutter;
+    background-color: $color-grey-light-1;
+    border-bottom: $line;
+    font-size: .87rem;
+
+    @include respond(large) {
+        padding: $detail-gutter-small;
+    }
+
+    @include respond(medium) {
+        flex-direction: column;
+    }
+
+    @include respond(extra-small) {
+        padding: .87rem;
+    }
+}
+
+.description {
+    background-color: $color-white;
+    box-shadow: $shadow-light;
+    padding: 1.87rem;
+    flex: 0 0 60%;
+    margin-right: $detail-gutter;
+
+    @include respond(large) {
+        padding: 1.3rem;
+        margin-right: $detail-gutter-small;
+    } 
+
+    @include respond(medium) {
+        margin: 0 0 $detail-gutter-small 0;
+    }
+
+    @include respond(extra-small) {
+        padding: .6rem;
+        margin: 0 0 .87rem 0;
+    }
+}
+
+.user-reviews {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond(medium) {
+        align-items: stretch;
+        .btn-inline {
+            align-self: flex-end;
+        }
+    }
+}

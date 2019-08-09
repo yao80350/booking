@@ -1,0 +1,90 @@
+.overview {
+    display: flex;
+    align-items: center;
+    border-bottom: $line;
+
+    &__heading {
+        font-size: 1.4rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: .93rem 1.87rem;
+
+        @include respond(medium) {
+            font-size: 1rem;
+            padding: .7rem 1.25rem;
+        }
+        @include respond(extra-small) {
+            font-size: .93rem;
+            padding: .7rem .8rem;
+        }
+    }
+
+    &__stars {
+        margin-right: auto; //it's better than flex: 1
+        display: flex; //remove the margin of inline-block child elements
+    }
+
+    &__icon-star,
+    &__icon-location {
+        width: $icon-size;
+        height: $icon-size;
+        fill: $color-primary;
+
+        @include respond(medium) {
+            width: $icon-size-small;
+            height: $icon-size-small;
+        }
+
+        @include respond(extra-small) {
+            width: .87rem;
+            height: .87rem;
+        }
+    }
+
+    &__location {
+       display: flex;
+       align-items: center;
+       font-size: .75rem;
+    }
+
+    &__icon-location {
+        margin-right: 5px;
+
+        @include respond(extra-small) {
+            margin-right: 2px;
+        }
+    }
+
+    &__rating {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-primary;
+        color: $color-white;
+        line-height: 1;
+        margin-left: 1.87rem;
+        align-self: stretch;
+        padding: 0 1.4rem;
+
+        @include respond(extra-small) {
+            padding: 0 .5rem;
+            margin-left: .8rem;
+        }
+    }
+
+    &__rating-average {
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+
+        @include respond(medium) {
+            font-size: 1.1rem;
+        }
+    }
+
+    &__rating-count {
+        font-size: 8px;
+        text-transform: uppercase;
+    }
+}

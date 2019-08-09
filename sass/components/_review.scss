@@ -1,0 +1,78 @@
+.review {
+    position: relative;
+    background-color: $color-white;
+    box-shadow: $shadow-light;
+    padding: 1.87rem;
+    margin-bottom: 2.18rem;
+    overflow: hidden;
+
+    @include respond(large) {
+        padding: 1.3rem;
+        margin-bottom: 1.7rem;
+    }
+
+    @include respond(extra-small) {
+        padding: .6rem;
+        margin-bottom: .87rem;
+    }
+    
+    &__text {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+        margin-top: 1.25rem;
+    }
+
+    &__photo {
+        height: 2.8rem;
+        width: 2.8rem;
+        border-radius: 50%;
+    }
+
+    &__user-box {
+        margin: 0 auto 0 .8rem;
+        line-height: 1;
+    }
+
+    &__user-name {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: .75rem;
+        margin-bottom: 4px;
+    }
+
+    &__user-date {
+        color: $color-grey-dark-3;
+        font-size: .75rem;
+        font-weight: 700;
+    }
+
+    &__rating {
+        color: $color-primary;
+        font-size: 1.37rem;
+        font-weight: 300;
+
+        @include respond(extra-small) {
+            font-size: 1.1rem;
+        }
+    }
+
+    &::before {
+        content: "\201C";
+        position: absolute;
+        top: -1.7rem;
+        left: -10px;
+        font-size: 12.5rem;
+        color: $color-grey-light-2;
+        font-family: Helvetica, Arial, Sans-Serif; // 三个都写-PC，Mac都会选Helvetica. 只写Sans-Serif-PC会用Arial，Mac会用Helvetica
+        line-height: 1;
+
+        @include respond(extra-small) {
+            font-size: 10rem;
+        }
+    }
+}

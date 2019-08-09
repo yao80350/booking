@@ -1,0 +1,25 @@
+.cta {
+    padding: 2.2rem 0;
+    text-align: center;  
+    
+    @include respond(large) {
+        padding: 1.4rem 0;
+    }  
+
+    &__book-now {
+        font-size: 1.25rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 1.56rem;
+
+        @include respond(medium) {
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        @include respond(extra-small) {
+            font-size: .87rem;
+        }
+    }
+}
+

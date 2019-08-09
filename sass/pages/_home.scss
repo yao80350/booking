@@ -1,0 +1,16 @@
+.content {
+    display: flex;
+    
+    @include respond(large) {
+        flex-direction: column;
+    }
+}
+
+.hotel-view {
+    flex: 1;
+    background-color: $color-white;
+}
+
+.paragraph:not(:last-of-type) {
+    margin-bottom: 1.25rem;
+}

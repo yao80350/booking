@@ -1,0 +1,7 @@
+.gallery {
+    display: flex;
+    &__photo {
+        display: block; //inline-block have a default margin-bottom
+        width: 100%;
+    }
+}

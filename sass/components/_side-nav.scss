@@ -1,0 +1,84 @@
+.side-nav {
+    font-size: .87rem;
+    margin-top: 2.2rem;
+
+    @include respond(large) {
+        display: flex;
+        margin: 0;
+    }
+
+    &__item {
+        position: relative;
+        @include respond(large) {
+            flex: 1;
+        }
+    
+        &:not(:last-child) {
+            margin-bottom: 5px;
+
+            @include respond(large) {
+                margin-bottom: 0;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 3px;
+            background-color: $color-primary;
+            transform: scaleY(0);
+            transform-origin: left;
+            transition: transform .2s, 
+                width .4s cubic-bezier(1,0,0,1) .2s, 
+                background-color .1s;
+            backface-visibility: hidden;         
+        }
+
+        &:hover::before,
+        &--active::before {
+            transform: scaleY(1);
+            width: 100%;
+        }
+
+        &:active::before {
+            background-color: $color-primary-light;
+        }
+    }
+
+    &__link:link,
+    &__link:visited {
+        position: relative;
+        color: $color-grey-light-1;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        padding: .93rem 1.87rem;
+        z-index: 1;
+
+        @include respond(large) {
+            justify-content: center;
+            padding: 1.25rem;
+        }
+
+        @include respond(small) {
+            flex-direction: column;  
+            padding: .6rem;
+        }
+    }
+
+    &__icon {
+        width: $icon-size;
+        height: $icon-size;
+        fill: currentColor;
+        margin-right: 1.25rem;
+
+        @include respond(small) {
+            margin-right: 0; 
+            width: $icon-size-small;
+            height: $icon-size-small;
+        }
+    }
+}
